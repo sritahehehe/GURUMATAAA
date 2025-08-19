@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Scene3D } from "@/components/3d/Scene3D";
+import ImageGallery from "@/components/ImageGallery";
 import { Code, Heart, Zap, Cat } from "lucide-react";
 
 const Home = () => {
@@ -130,6 +131,9 @@ const Home = () => {
           </p>
         </motion.div>
       </div>
+      
+      {/* Floating Image Gallery */}
+      <ImageGallery />
     </div>
   );
 };

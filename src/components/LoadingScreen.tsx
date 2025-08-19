@@ -44,15 +44,25 @@ export const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
       </div>
 
       <div className="text-center space-y-8 z-10">
-        {/* Ankita's Image Placeholder */}
+        {/* Ankita's Image */}
         <motion.div
           initial={{ scale: 0, rotate: 180 }}
           animate={{ scale: 1, rotate: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
           className="mx-auto w-48 h-48 rounded-full bg-gradient-to-br from-primary to-accent p-2"
         >
-          <div className="w-full h-full rounded-full bg-muted flex items-center justify-center">
-            <span className="text-4xl font-bold text-primary">A</span>
+          <div className="w-full h-full rounded-full overflow-hidden bg-muted flex items-center justify-center">
+            <img 
+              src="/lovable-uploads/8300425c-ed26-40da-a3cb-7d857362b6f9.png"
+              alt="Ankita"
+              className="w-full h-full object-cover rounded-full"
+              onError={(e) => {
+                // Fallback to placeholder if image fails to load
+                const target = e.target as HTMLImageElement;
+                target.style.display = 'none';
+                target.parentElement!.innerHTML = '<span className="text-4xl font-bold text-primary">A</span>';
+              }}
+            />
           </div>
         </motion.div>
 
