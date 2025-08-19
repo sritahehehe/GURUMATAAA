@@ -126,9 +126,6 @@ const Home = () => {
           transition={{ delay: 2, duration: 1 }}
           className="mt-16 text-center"
         >
-          <p className="text-muted-foreground">
-            Made with 💜 and lots of code for the amazing Ankita
-          </p>
         </motion.div>
       </div>
       
